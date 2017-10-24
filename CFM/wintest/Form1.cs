@@ -23,7 +23,10 @@ namespace wintest
             list.Add(new student() { id = 1, name = "zhang" });
             list.Add(new student() { id = 2, name = "li" });
             this.comboBox1.DataBind(list, "id", "name", 1);
+
+            this.listView1.EnableSort();
             
         }
+    
     }
 }
