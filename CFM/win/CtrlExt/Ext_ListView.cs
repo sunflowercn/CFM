@@ -18,37 +18,90 @@ namespace win.CtrlExt
         static void lvi_ColumnClick(object sender, ColumnClickEventArgs e)
         {
             ListView lvi = sender as ListView;
-            lvi.ListViewItemSorter = new IntCompare(lvi.Columns[e.Column],lvi.Sorting);       
+            ListViewItemCompare precompare = lvi.ListViewItemSorter as ListViewItemCompare;
+            if(precompare==null || e.Column != precompare.ch.Index)            
+                lvi.ListViewItemSorter = new ListViewItemCompare(lvi.Columns[e.Column],SortOrder.Ascending);
+            else
+                lvi.ListViewItemSorter = new ListViewItemCompare(lvi.Columns[e.Column], lvi.Sorting==SortOrder.Descending ? SortOrder.Ascending:SortOrder.Descending);
             lvi.Sort();
         }
     }
 
-    class IntCompare : IComparer
+    class ListViewItemCompare : IComparer
     {
-        ColumnHeader ch;
-
-        public IntCompare(ColumnHeader ch,SortOrder sortorder)
+        public ColumnHeader ch;
+        public SortOrder sortorder;
+        public ListViewItemCompare(ColumnHeader ch,SortOrder sortorder)
         {
-            this.ch = ch;            
+            this.ch = ch;
+            this.sortorder = sortorder;
         }
         public int Compare(object x, object y)
-        {
-           
+        {           
             ListViewItem lvi1 = x as ListViewItem;
             ListViewItem lvi2 = y as ListViewItem;
 
-            if (ch.Tag.ToString() == "int")
+            string strval1= lvi1.SubItems[ch.Index].Text;
+            string strval2= lvi2.SubItems[ch.Index].Text;
+
+            int returnval = 1;
+            
+            if (string.IsNullOrWhiteSpace(strval1))                    
+                returnval = -1;
+            else if (string.IsNullOrWhiteSpace(strval2))
+                returnval = 1;
+            else
             {
-                int val1 = Convert.ToInt32(lvi1.SubItems[ch.Index].Text);
-                int val2 = Convert.ToInt32(lvi2.SubItems[ch.Index].Text);
-                return val1.CompareTo(val2);
-            }
-            else if (ch.Tag.ToString() == "string")
-            {
-                return string.Compare(lvi1.SubItems[ch.Index].Text, lvi2.SubItems[ch.Index].Text);
+                if (ch.Tag.ToString() == "int")
+                {
+                    int val1, val2;
+                    int.TryParse(strval1, out val1);
+                    int.TryParse(strval2, out val2);
+                    returnval = val1.CompareTo(val2);
+                }
+                else if (ch.Tag.ToString() == "double")
+                {
+                    double val1, val2;
+                    double.TryParse(strval1, out val1);
+                    double.TryParse(strval2, out val2);
+                    returnval = val1.CompareTo(val2);
+                }
+                else if (ch.Tag.ToString() == "float")
+                {
+                    float val1, val2;
+                    float.TryParse(strval1, out val1);
+                    float.TryParse(strval2, out val2);
+                    returnval = val1.CompareTo(val2);
+                }
+                else if (ch.Tag.ToString() == "decimal")
+                {
+                    decimal val1, val2;
+                    decimal.TryParse(strval1, out val1);
+                    decimal.TryParse(strval2, out val2);
+                    returnval = val1.CompareTo(val2);
+                }
+                else if (ch.Tag.ToString() == "string")
+                {
+                    returnval = string.Compare(lvi1.SubItems[ch.Index].Text, lvi2.SubItems[ch.Index].Text);
+                }
+                else if (ch.Tag.ToString() == "datetime")
+                {
+                    DateTime val1, val2;
+                    DateTime.TryParse(strval1, out val1);
+                    DateTime.TryParse(strval2, out val2);
+                    returnval = val1.CompareTo(val2);
+                }
             }
 
-            return 1;
+            lvi1.ListView.Sorting =this.sortorder;
+
+            //(lvi1.ListView.ListViewItemSorter as ListViewItemCompare).ch = this.ch;
+            //(lvi1.ListView.ListViewItemSorter as ListViewItemCompare).sortorder = this.sortorder;
+           
+            if (this.sortorder == SortOrder.Descending)
+                returnval *= -1;
+
+            return returnval;
            
         }
     }
