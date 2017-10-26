@@ -8,7 +8,9 @@ using System.Windows.Forms;
 namespace win.CtrlExt
 {
     public static class Ext_ListView
-    {
+    {        
+        private static string Asc = ((char)0x2191).ToString().PadLeft(1, ' '); 
+        private static string Des = ((char)0x2193).ToString().PadLeft(1, ' ');
         public static void EnableSort(this ListView lvi)
         {
           
@@ -18,17 +20,26 @@ namespace win.CtrlExt
         static void lvi_ColumnClick(object sender, ColumnClickEventArgs e)
         {
             ListView lvi = sender as ListView;
+
+            if (lvi.Tag != null)
+            {
+                int index= (lvi.Tag as ColumnHeader).Index;
+                 lvi.Columns[index].Text = lvi.Columns[index].Text.Replace(Asc, string.Empty).Replace(Des, string.Empty);
+            }
             ListViewItemCompare precompare = lvi.ListViewItemSorter as ListViewItemCompare;
-            if(precompare==null || e.Column != precompare.ch.Index)            
-                lvi.ListViewItemSorter = new ListViewItemCompare(lvi.Columns[e.Column],SortOrder.Ascending);
-            else
-                lvi.ListViewItemSorter = new ListViewItemCompare(lvi.Columns[e.Column], lvi.Sorting==SortOrder.Descending ? SortOrder.Ascending:SortOrder.Descending);
+
+            if(precompare==null || e.Column != precompare.ch.Index)                        
+                lvi.ListViewItemSorter = new ListViewItemCompare(lvi.Columns[e.Column],SortOrder.Ascending);                          
+            else            
+                lvi.ListViewItemSorter = new ListViewItemCompare(lvi.Columns[e.Column], lvi.Sorting==SortOrder.Descending ? SortOrder.Ascending:SortOrder.Descending);                          
             lvi.Sort();
+
+            lvi.Columns[e.Column].Text += lvi.Sorting == SortOrder.Descending ? Des : Asc;
         }
     }
 
     class ListViewItemCompare : IComparer
-    {
+    {        
         public ColumnHeader ch;
         public SortOrder sortorder;
         public ListViewItemCompare(ColumnHeader ch,SortOrder sortorder)
@@ -94,12 +105,10 @@ namespace win.CtrlExt
             }
 
             lvi1.ListView.Sorting =this.sortorder;
-
-            //(lvi1.ListView.ListViewItemSorter as ListViewItemCompare).ch = this.ch;
-            //(lvi1.ListView.ListViewItemSorter as ListViewItemCompare).sortorder = this.sortorder;
+            lvi1.ListView.Tag = this.ch;          
            
             if (this.sortorder == SortOrder.Descending)
-                returnval *= -1;
+                returnval *= -1;          
 
             return returnval;
            
