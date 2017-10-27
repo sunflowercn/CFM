@@ -52,6 +52,12 @@ namespace win.CtrlExt
             ListViewItem lvi1 = x as ListViewItem;
             ListViewItem lvi2 = y as ListViewItem;
 
+            if (lvi1 == null)                           
+                return -1;
+            
+            if (lvi2 == null)                      
+                return 1;            
+
             string strval1= lvi1.SubItems[ch.Index].Text;
             string strval2= lvi2.SubItems[ch.Index].Text;
 

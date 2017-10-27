@@ -15,6 +15,7 @@ namespace wintest
         public Form1()
         {
             InitializeComponent();
+            this.listView1.EnableSort();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -24,8 +25,22 @@ namespace wintest
             list.Add(new student() { id = 2, name = "li" });
             this.comboBox1.DataBind(list, "id", "name", 1);
 
-            this.listView1.EnableSort();
-            
+           // this.BindListView();
+        }
+
+        private void BindListView()
+        {
+            List<student> list = new List<student>();
+            list.Add(new student() { id = 1, name = "zhang" });
+            list.Add(new student() { id = 2, name = "li" });
+
+            this.listView1.Items.Clear();
+            foreach (var item in list)
+            {
+                ListViewItem lvi = new ListViewItem(item.id.ToString());
+                lvi.SubItems.Add(item.name);
+                this.listView1.Items.Add(lvi);
+            }
         }
     
     }
