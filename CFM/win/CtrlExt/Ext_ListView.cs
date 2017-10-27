@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -11,6 +12,11 @@ namespace win.CtrlExt
     {        
         private static string Asc = ((char)0x2191).ToString().PadLeft(1, ' '); 
         private static string Des = ((char)0x2193).ToString().PadLeft(1, ' ');
+       
+        /// <summary>
+        /// 可在ListView的column上设置tag属性（）
+        /// </summary>
+        /// <param name="lvi"></param>
         public static void EnableSort(this ListView lvi)
         {
           
@@ -50,7 +56,7 @@ namespace win.CtrlExt
         public int Compare(object x, object y)
         {           
             ListViewItem lvi1 = x as ListViewItem;
-            ListViewItem lvi2 = y as ListViewItem;
+            ListViewItem lvi2 = y as ListViewItem;         
 
             if (lvi1 == null)                           
                 return -1;
@@ -69,7 +75,11 @@ namespace win.CtrlExt
                 returnval = 1;
             else
             {
-                if (ch.Tag.ToString() == "int")
+                if (ch.Tag==null || string.IsNullOrWhiteSpace(ch.Tag.ToString()) || ch.Tag.ToString() == "string")
+                {
+                    returnval = string.Compare(lvi1.SubItems[ch.Index].Text, lvi2.SubItems[ch.Index].Text);
+                }
+                else if (ch.Tag.ToString() == "int")
                 {
                     int val1, val2;
                     int.TryParse(strval1, out val1);
@@ -96,11 +106,7 @@ namespace win.CtrlExt
                     decimal.TryParse(strval1, out val1);
                     decimal.TryParse(strval2, out val2);
                     returnval = val1.CompareTo(val2);
-                }
-                else if (ch.Tag.ToString() == "string")
-                {
-                    returnval = string.Compare(lvi1.SubItems[ch.Index].Text, lvi2.SubItems[ch.Index].Text);
-                }
+                }               
                 else if (ch.Tag.ToString() == "datetime")
                 {
                     DateTime val1, val2;
