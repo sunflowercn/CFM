@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace win.CtrlExt
+namespace win.form.CtrlExt
 {
     public static class Ext_ListView
     {        

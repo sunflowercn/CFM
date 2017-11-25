@@ -1,4 +1,5 @@
-﻿namespace wintest
+﻿using System.Windows.Forms;
+namespace wintest
 {
     partial class Form1
     {
@@ -29,7 +30,7 @@
         private void InitializeComponent()
         {
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.listViewEx1 = new DevComponents.DotNetBar.Controls.ListViewEx();
+            this.listViewEx1 = new ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
@@ -47,7 +48,6 @@
             // 
             // 
             // 
-            this.listViewEx1.Border.Class = "ListViewBorder";
             this.listViewEx1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
@@ -83,7 +83,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox comboBox1;
-        private DevComponents.DotNetBar.Controls.ListViewEx listViewEx1;
+        private System.Windows.Forms.ListView listViewEx1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
     }

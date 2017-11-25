@@ -7,7 +7,10 @@ namespace wintest
 {
     public class student
     {
-        public int id { get; set; }
+        public Guid id { get; set; }
+        public string xh { get; set; }
+
+      
         public string name { get; set; }
     }
 }

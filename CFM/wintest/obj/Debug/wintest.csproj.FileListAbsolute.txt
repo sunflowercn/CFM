@@ -1,0 +1,12 @@
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\wintest.exe
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\wintest.pdb
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\win.dll
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\win.pdb
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.Form1.resources
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.Properties.Resources.resources
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.csproj.GenerateResource.Cache
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.exe
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.pdb
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\win.form.dll
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\win.form.pdb

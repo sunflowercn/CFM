@@ -81,6 +81,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\win.form\win.form.csproj">
+      <Project>{92309c6c-fc72-4562-a1f4-295a978d0276}</Project>
+      <Name>win.form</Name>
+    </ProjectReference>
     <ProjectReference Include="..\win\win.csproj">
       <Project>{94aa1a5f-ede1-4e36-989e-39e8fb9a8d48}</Project>
       <Name>win</Name>

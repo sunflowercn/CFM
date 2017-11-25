@@ -1,0 +1,4 @@
+C:\Users\Administrator\Source\Repos\CFM\CFM\win\bin\Debug\win.dll
+C:\Users\Administrator\Source\Repos\CFM\CFM\win\bin\Debug\win.pdb
+C:\Users\Administrator\Source\Repos\CFM\CFM\win\obj\Debug\win.dll
+C:\Users\Administrator\Source\Repos\CFM\CFM\win\obj\Debug\win.pdb
