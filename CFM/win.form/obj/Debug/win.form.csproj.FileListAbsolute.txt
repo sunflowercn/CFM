@@ -2,3 +2,4 @@ C:\Users\Administrator\Source\Repos\CFM\CFM\win.form\bin\Debug\win.form.dll
 C:\Users\Administrator\Source\Repos\CFM\CFM\win.form\bin\Debug\win.form.pdb
 C:\Users\Administrator\Source\Repos\CFM\CFM\win.form\obj\Debug\win.form.dll
 C:\Users\Administrator\Source\Repos\CFM\CFM\win.form\obj\Debug\win.form.pdb
+C:\Users\Administrator\Source\Repos\CFM\CFM\win.form\obj\Debug\win.form.csprojResolveAssemblyReference.cache

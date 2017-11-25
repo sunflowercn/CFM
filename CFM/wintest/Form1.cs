@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using win.form.CtrlExt;
+using win.Inherit;
 
 namespace wintest
 {
@@ -21,33 +22,33 @@ namespace wintest
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            dt.Columns.Add("id",typeof(Guid));
-            dt.Columns.Add("name");
+            //DataTable dt = new DataTable();
+            //dt.Columns.Add("id",typeof(Guid));
+            //dt.Columns.Add("name");
 
-            DataRow dr = dt.NewRow();
-            dr[0] = Guid.NewGuid();
-            dr[1] = "zhangsan";
-            dt.Rows.Add(dr);
+            //DataRow dr = dt.NewRow();
+            //dr[0] = Guid.NewGuid();
+            //dr[1] = "zhangsan";
+            //dt.Rows.Add(dr);
 
-            this.comboBox1.DataBind(dt, "id", "name");
+            //this.comboBox1.DataBind(dt, "id", "name");
 
-            MessageBox.Show(this.comboBox1.SelectedValue.ToString());
+            //MessageBox.Show(this.comboBox1.SelectedValue.ToString());
+
+            this.BindListView();
         }
 
         private void BindListView()
         {
-            //List<student> list = new List<student>();
-            //list.Add(new student() { id = Guid.NewGuid(),xh=1, name = "zhang" });
-            //list.Add(new student() { id = Guid.NewGuid(),xh=2, name = "li" });
+            List<student> list = new List<student>();
+            list.Add(new student() { id = Guid.NewGuid(), xh = "1", name = "zhang" });
+            list.Add(new student() { id = Guid.NewGuid(), xh = "2", name = "li" });
 
-            //this.listViewEx1.Items.Clear();
-            //foreach (var item in list)
-            //{
-            //    ListViewItem lvi = new ListViewItem(item.id.ToString());
-            //    lvi.SubItems.Add(item.name);
-            //    this.listViewEx1.Items.Add(lvi);
-            //}
+
+
+            SortedBindingCollection<student> dource = new SortedBindingCollection<student>(list);
+
+            this.dataGridView1.DataSource = dource;
         }
     
     }
