@@ -9,6 +9,8 @@ using System.Text;
 using System.Windows.Forms;
 using win.form.CtrlExt;
 using win.Inherit;
+using win.Util;
+using win;
 
 namespace wintest
 {
@@ -35,7 +37,9 @@ namespace wintest
 
             //MessageBox.Show(this.comboBox1.SelectedValue.ToString());
 
-            this.BindListView();
+            //this.BindListView();
+
+           string ss=  Util_Math.CalculateValue("2+3*2+8/2+3");
         }
 
         private void BindListView()
@@ -44,11 +48,10 @@ namespace wintest
             list.Add(new student() { id = Guid.NewGuid(), xh = "1", name = "zhang" });
             list.Add(new student() { id = Guid.NewGuid(), xh = "2", name = "li" });
 
+            string str = Util_Xml.ToXML(list);
 
+            List<student> list1 = Util_Xml.FromXML<List<student>>(str);
 
-            SortedBindingCollection<student> dource = new SortedBindingCollection<student>(list);
-
-            this.dataGridView1.DataSource = dource;
         }
     
     }
