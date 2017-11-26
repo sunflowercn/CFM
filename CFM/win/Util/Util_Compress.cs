@@ -20,7 +20,6 @@ namespace win.Util
                 return memory.ToArray();
             }
         }
-
         public static byte[] Decompress(byte[] gzip)
         {
             // Create a GZIP stream with decompression mode.

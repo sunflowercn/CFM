@@ -17,7 +17,7 @@ namespace win.Util
         [DllImport("kernel32.dll")]
         public static extern bool CloseHandle(IntPtr hObject);
         /// <summary>
-        /// 用于判断文件是否可以拷贝；
+        /// 用于判断文件是否可以以独占方式打开；
         /// </summary>
         /// <param name="fileFullName"></param>
         /// <returns></returns>
