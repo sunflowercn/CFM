@@ -3,3 +3,6 @@ C:\Users\Administrator\Source\Repos\CFM\CFM\win.form\bin\Debug\win.form.pdb
 C:\Users\Administrator\Source\Repos\CFM\CFM\win.form\obj\Debug\win.form.dll
 C:\Users\Administrator\Source\Repos\CFM\CFM\win.form\obj\Debug\win.form.pdb
 C:\Users\Administrator\Source\Repos\CFM\CFM\win.form\obj\Debug\win.form.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Source\Repos\CFM\CFM\win.form\obj\Debug\win.form.Inherit.MessageBoxEx.resources
+C:\Users\Administrator\Source\Repos\CFM\CFM\win.form\obj\Debug\win.form.Properties.Resources.resources
+C:\Users\Administrator\Source\Repos\CFM\CFM\win.form\obj\Debug\win.form.csproj.GenerateResource.Cache
