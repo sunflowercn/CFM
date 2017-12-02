@@ -72,7 +72,7 @@
     <None Include="Resources\Prompt.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\warning.gif" />
+    <Content Include="obj\Debug\win.form.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
