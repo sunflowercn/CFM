@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardService\CardService.cs" />
+    <Compile Include="CardService\drivers\URF_R330_CardDevice.cs" />
+    <Compile Include="CardService\ICardDevice.cs" />
     <Compile Include="Ext\Ext_Object.cs" />
     <Compile Include="Inherit\SortedBindingCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -50,9 +53,7 @@
     <Compile Include="Util\Util_Unix.cs" />
     <Compile Include="Util\Util_Xml.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CardService\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
