@@ -75,6 +75,12 @@
     <Content Include="obj\Debug\win.form.pdb" />
     <None Include="Resources\warning.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\win\win.csproj">
+      <Project>{94aa1a5f-ede1-4e36-989e-39e8fb9a8d48}</Project>
+      <Name>win</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

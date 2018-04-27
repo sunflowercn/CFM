@@ -14,6 +14,7 @@ using win;
 using win.form.Inherit;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Diagnostics;
+using win.Ext;
 
 namespace wintest
 {
@@ -28,6 +29,19 @@ namespace wintest
         private void Form1_Load(object sender, EventArgs e)
         {
             this.timer1.Start();
+
+            student a = new student { id = Guid.NewGuid(), birthdate = new DateTime(2011, 1, 1), name = "张三" };
+
+            List<student> liststua = new List<student>();
+            liststua.Add(a);
+
+
+            List<student> b = liststua.Clone();
+
+            a.birthdate = new DateTime(9999, 1, 1);
+            a.name = "lisi";
+            a.id = Guid.NewGuid();
+            
         }
         
         bool loading= false;
