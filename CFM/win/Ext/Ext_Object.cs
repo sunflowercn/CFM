@@ -9,7 +9,7 @@ namespace win.Ext
     {
         public static string ToString2(this object obj)
         {
-            return obj == null ? string.Empty : obj.ToString();
+            return obj == null ? string.Empty : obj.ToString(); 
         }
 
         /// <summary>
