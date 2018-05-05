@@ -27,7 +27,7 @@ namespace wintest
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.timer1.Start();
+            //this.timer1.Start();
         }
         
         bool loading= false;
@@ -39,7 +39,7 @@ namespace wintest
 
             loading=true;
             //this.webBrowser1.Navigate("about:blank");
-            this.webBrowser1.Navigate("http://www.baidu.com");
+            //this.webBrowser1.Navigate("http://www.baidu.com");
 
             double usedMemory = 0;
             Process p = Process.GetProcesses().Where(x => x.ProcessName.Contains("进程名")).FirstOrDefault();
@@ -53,7 +53,7 @@ namespace wintest
                 }
             }
 
-            this.listBox1.Items.Add(usedMemory.ToString());
+            //this.listBox1.Items.Add(usedMemory.ToString());
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
