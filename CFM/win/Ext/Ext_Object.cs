@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace win.Ext
 {
@@ -40,6 +42,21 @@ namespace win.Ext
             }
 
             return obj1;
+        }
+
+        /// <summary>
+        /// 对于List<T> 等复杂类型的克隆
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public static T Clone1<T>(this T obj) where T : new()
+        {
+            XmlSerializer xs = new XmlSerializer(typeof(T));
+            Stream s = new MemoryStream();
+            xs.Serialize(s, obj);
+            s.Seek(0, 0);
+            return (T)xs.Deserialize(s);
         }
     }
 }
