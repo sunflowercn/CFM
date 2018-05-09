@@ -15,7 +15,7 @@ namespace win.Ext
         }
 
         /// <summary>
-        /// 简单对象（字段或属性不能包含引用类型）克隆
+        /// 简单对象（字段或属性不能包含引用类型）克隆,不适用于List<T>
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="obj"></param>

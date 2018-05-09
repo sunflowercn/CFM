@@ -46,6 +46,7 @@
     <Compile Include="Ext\Ext_Object.cs" />
     <Compile Include="Inherit\SortedBindingCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tester\TimeTester.cs" />
     <Compile Include="Util\Util_Compress.cs" />
     <Compile Include="Util\Util_DataSet.cs" />
     <Compile Include="Util\Util_File.cs" />

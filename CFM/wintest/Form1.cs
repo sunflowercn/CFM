@@ -15,6 +15,8 @@ using win.form.Inherit;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Diagnostics;
 using win.Ext;
+using win.Tester;
+using System.Threading;
 
 namespace wintest
 {
@@ -26,57 +28,66 @@ namespace wintest
             
         }
 
+        private List<int> list;
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.timer1.Start();
-
-            student a = new student { id = Guid.NewGuid(), birthdate = new DateTime(2011, 1, 1), name = "张三" };
-
-            List<student> liststua = new List<student>();
-            liststua.Add(a);
-
-
-            List<student> b = liststua.Clone();
-
-            a.birthdate = new DateTime(9999, 1, 1);
-            a.name = "lisi";
-            a.id = Guid.NewGuid();
-            
+            list = this.InitList();
+           
         }
-        
-        bool loading= false;
-      
-        private void timer1_Tick(object sender, EventArgs e)
+   
+       
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            if(loading)
-                return;
+            TimeTester tt = new TimeTester();
 
-            loading=true;
-            //this.webBrowser1.Navigate("about:blank");
-            this.webBrowser1.Navigate("http://www.baidu.com");
+            long ss = tt.SpendTime;
+        }
 
-            double usedMemory = 0;
-            Process p = Process.GetProcesses().Where(x => x.ProcessName.Contains("进程名")).FirstOrDefault();
-            if (p != null)
+        private void PerformanceCompare()
+        {
+            int a10000 = 0;
+            int a30000 = 0;
+            int a50000 = 0;
+
+            using (TimeTester me = new TimeTester())
             {
-                p.Refresh();
-                string procName = p.ProcessName;
-                using (PerformanceCounter pc = new PerformanceCounter("Process", "Working Set - Private", procName))
-                {
-                    usedMemory = pc.NextValue() / 1024.0 / 1024.0;
-                }
+                a10000 = this.list.Count(p => p < 10000);
+                a30000 = this.list.Count(p => p < 30000);
+                a50000 = this.list.Count(p => p < 50000);
             }
 
-            this.listBox1.Items.Add(usedMemory.ToString());
-        }
+            using (TimeTester me = new TimeTester())
+            {
+                foreach (var item in list)
+                {
+                    if (item < 10000)
+                    {
+                        a10000++;
+                        a30000++;
+                        a50000++;
+                    }
+                    else if (item < 30000)
+                    {
+                        a30000++;
+                        a50000++;
+                    }
+                    else
+                    {
+                        a50000++;
+                    }
 
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+                }
+            }
+        }     
+        private List<int> InitList()
         {
-            loading=false;
+            List<int> list = new List<int>();
+            for (int i = 0; i < 50000; i++)
+            {
+                list.Add(i);
+            }
+            return list;
         }
-
-       
-
-       
     }
 }
