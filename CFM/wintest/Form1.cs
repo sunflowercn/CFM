@@ -30,18 +30,46 @@ namespace wintest
 
         private List<int> list;
         private void Form1_Load(object sender, EventArgs e)
-        {
-            list = this.InitList();
-           
+        {         
+
+            List<string> list = new List<string> { "zhangsan", "lisi" };
+
+            List<string> list1 = new List<string> { "zhang", "lisi2" };
+
+            var ss = list.Where(p => list1.Contains(p));
+
+        
+
         }
    
        
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TimeTester tt = new TimeTester();
+            try
+            {
+                for (int i = 0; i < 10000; i++)
+                {
+                    Thread t = new Thread(new ThreadStart(this.MultThreadTest));
+                    t.Start();
+                }
+            }
+            catch (Exception ex)
+            {
+                int i = 0;
+            }
 
-            long ss = tt.SpendTime;
+
+        }
+
+        private void MultThreadTest()
+        {
+            using (TimeTester tt = new TimeTester(this.Name, "button1_click", LogType.txt))
+            {
+                Random r = new Random();
+                int ss = r.Next(10);
+                Thread.Sleep(ss);
+            }
         }
 
         private void PerformanceCompare()
@@ -50,14 +78,14 @@ namespace wintest
             int a30000 = 0;
             int a50000 = 0;
 
-            using (TimeTester me = new TimeTester())
+            using (TimeTester me = new TimeTester(this.Name,"per"))
             {
                 a10000 = this.list.Count(p => p < 10000);
                 a30000 = this.list.Count(p => p < 30000);
                 a50000 = this.list.Count(p => p < 50000);
             }
 
-            using (TimeTester me = new TimeTester())
+            using (TimeTester me = new TimeTester(this.Name,"per1"))
             {
                 foreach (var item in list)
                 {
