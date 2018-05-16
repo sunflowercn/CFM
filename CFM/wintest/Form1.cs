@@ -46,19 +46,10 @@ namespace wintest
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                for (int i = 0; i < 10000; i++)
-                {
-                    Thread t = new Thread(new ThreadStart(this.MultThreadTest));
-                    t.Start();
-                }
-            }
-            catch (Exception ex)
-            {
-                int i = 0;
-            }
 
+            string ss = Util_Encoding.ToUnicode("zhongguo中");
+
+            string ss1 = Util_Encoding.ToGB2312(ss);
 
         }
 

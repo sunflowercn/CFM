@@ -49,8 +49,12 @@
     <Compile Include="Tester\TimeTester.cs" />
     <Compile Include="Util\Util_Compress.cs" />
     <Compile Include="Util\Util_DataSet.cs" />
+    <Compile Include="Util\Util_Encoding.cs" />
     <Compile Include="Util\Util_File.cs" />
     <Compile Include="Util\Util_Math.cs" />
+    <Compile Include="Util\Util_PinYin.cs" />
+    <Compile Include="Util\Util_PinYin1.cs" />
+    <Compile Include="Util\Util_Serilizer.cs" />
     <Compile Include="Util\Util_Unix.cs" />
     <Compile Include="Util\Util_Xml.cs" />
   </ItemGroup>
