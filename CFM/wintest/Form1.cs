@@ -17,10 +17,14 @@ using System.Diagnostics;
 using win.Ext;
 using win.Tester;
 using System.Threading;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+using win.form.FormManager;
 
 namespace wintest
 {
-    public partial class Form1 : Form
+    public partial class Form1 : ChildForm
     {
         public Form1()
         {
@@ -42,10 +46,16 @@ namespace wintest
 
         }
    
+
        
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
+            MessageBoxEx.Show(LoadMode.Error, "error");
+
+
 
             string ss = Util_Encoding.ToUnicode("zhongguo中");
 

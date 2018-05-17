@@ -10,3 +10,4 @@ C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.Properties
 C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.csproj.GenerateResource.Cache
 C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.exe
 C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.pdb
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.MainForm.resources

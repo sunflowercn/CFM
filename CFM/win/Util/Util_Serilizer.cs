@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Serialization;
@@ -17,6 +19,7 @@ namespace win.Util
             XmlSerializer xs = new XmlSerializer(obj.GetType());
             xs.Serialize(sw, obj);
             return sw.ToString();
+            
         }
 
         public static T Deserialize<T>(string data)
@@ -57,6 +60,30 @@ namespace win.Util
             {
                 return default(T);
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj">必须是被标记为[Serializable]的类</param>
+        /// <param name="fileName"></param>
+        public static void BinarySerialize(object obj, string fileName="d:\\MyFile.bin")
+        {          
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream(fileName, FileMode.Create,
+            FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, obj);
+            stream.Close();
+        }
+
+        public static object BinaryDeSerializa(string fileName = "d:\\MyFile.bin")
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream(fileName, FileMode.Open,
+            FileAccess.Read, FileShare.Read);
+            object obj = formatter.Deserialize(stream);
+            stream.Close();
+            return obj;
         }
     }   
 }

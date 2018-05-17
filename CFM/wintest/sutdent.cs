@@ -5,6 +5,7 @@ using System.Text;
 
 namespace wintest
 {
+    [Serializable]
     public class student
     {
         public Guid id { get; set; }
