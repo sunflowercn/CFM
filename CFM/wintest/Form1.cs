@@ -52,14 +52,8 @@ namespace wintest
         private void button1_Click(object sender, EventArgs e)
         {
 
-
-            MessageBoxEx.Show(LoadMode.Error, "error");
-
-
-
-            string ss = Util_Encoding.ToUnicode("zhongguo中");
-
-            string ss1 = Util_Encoding.ToGB2312(ss);
+            Image img = this.chart1.ToImage();
+            img.Save("temp.bmp");
 
         }
 

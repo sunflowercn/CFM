@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CtrlExt\Ext_ComBox.cs" />
+    <Compile Include="CtrlExt\Ext_Control.cs" />
     <Compile Include="CtrlExt\Ext_ListView.cs" />
     <Compile Include="FormManager\ChildForm.cs">
       <SubType>Form</SubType>
