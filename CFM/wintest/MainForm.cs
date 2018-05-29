@@ -105,5 +105,12 @@ namespace wintest
                 childForm.Close();
             }
         }
+
+        private void Util_EncodingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Util_EncodingForm form = new Util_EncodingForm();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
