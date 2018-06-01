@@ -12,3 +12,5 @@ C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\win.form.pdb
 C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\win.pdb
 C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.exe
 C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.pdb
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\wintest.exe.config
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\skin.css

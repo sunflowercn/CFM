@@ -53,6 +53,7 @@
     <Compile Include="Util\Util_DataSet.cs" />
     <Compile Include="Util\Util_Encoding.cs" />
     <Compile Include="Util\Util_File.cs" />
+    <Compile Include="Util\Util_Http.cs" />
     <Compile Include="Util\Util_Math.cs" />
     <Compile Include="Util\Util_PinYin.cs" />
     <Compile Include="Util\Util_PinYin1.cs" />

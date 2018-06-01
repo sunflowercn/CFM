@@ -21,6 +21,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using win.form.FormManager;
+using System.Reflection;
 
 namespace wintest
 {
@@ -34,20 +35,30 @@ namespace wintest
 
         private List<int> list;
         private void Form1_Load(object sender, EventArgs e)
-        {         
+        {
+            //this.webBrowser1.DocumentText = Properties.Resources.test ;
 
-            List<string> list = new List<string> { "zhangsan", "lisi" };
 
-            List<string> list1 = new List<string> { "zhang", "lisi2" };
+            Assembly asm = Assembly.GetExecutingAssembly();
+            var names = asm.GetManifestResourceNames();
+            var t = asm.GetManifestResourceStream("wintest.test.html");
 
-            var ss = list.Where(p => list1.Contains(p));
 
-        
+            Byte[] bytelist = new byte[t.Length];
+            t.Read(bytelist, 0, bytelist.Count());
+
+            string html = System.Text.Encoding.UTF8.GetString(bytelist);
+
+            this.webBrowser1.DocumentText = "";
+
+            this.webBrowser1.Document.Write(html);
+            this.webBrowser1.Refresh();
+
 
         }
-   
 
-       
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -133,6 +144,31 @@ namespace wintest
                 list.Add(i);
             }
             return list;
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            //Assembly asm = Assembly.GetExecutingAssembly();
+            //var names = asm.GetManifestResourceNames();
+            //var t = asm.GetManifestResourceStream("RegisterConsole.html");
+
+            //Byte[] bytelist = new byte[t.Length];
+            //t.Read(bytelist, 0, bytelist.Count());
+
+            //string html = System.Text.Encoding.UTF8.GetString(bytelist);
+
+            //this.webBrowser1.DocumentText = "";
+            //Application.DoEvents();
+
+            //this.webBrowser1.Navigate("about:blank");
+            //this.webBrowser1.Document.Write(html);
+            //string css = File.ReadAllText("skin.css");
+            //this.webBrowser1.DocumentText += ("<style>" + css + "</style>");
+
+            HtmlDocument doc= this.webBrowser1.Document;
+
+            var ss = doc.GetElementById("dd");
+            ss.InnerText += "okkkk";
         }
     }
 }

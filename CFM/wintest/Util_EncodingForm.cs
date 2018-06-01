@@ -18,7 +18,7 @@ namespace wintest
 
         private void buttonTransfer_Click(object sender, EventArgs e)
         {
-            this.label2.Text= win.Util.Util_Encoding.UnHex(this.label1.Text,"gb2312");
+            this.label2.Text= win.Util.Util_Encoding.UnHex(this.textBox1.Text,"gb2312");
         }
     }
 }
