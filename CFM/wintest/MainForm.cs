@@ -112,5 +112,12 @@ namespace wintest
             form.MdiParent = this;
             form.Show();
         }
+
+        private void Util_xmlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Util_XmlForm form = new Util_XmlForm();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

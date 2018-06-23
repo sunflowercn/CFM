@@ -45,7 +45,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.Util_EncodingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.redoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Util_xmlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -205,7 +205,7 @@
             // 
             this.editMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Util_EncodingToolStripMenuItem,
-            this.redoToolStripMenuItem,
+            this.Util_xmlToolStripMenuItem,
             this.toolStripSeparator6,
             this.cutToolStripMenuItem,
             this.copyToolStripMenuItem,
@@ -226,14 +226,15 @@
             this.Util_EncodingToolStripMenuItem.Text = "Util_Encoding";
             this.Util_EncodingToolStripMenuItem.Click += new System.EventHandler(this.Util_EncodingToolStripMenuItem_Click);
             // 
-            // redoToolStripMenuItem
+            // Util_xmlToolStripMenuItem
             // 
-            this.redoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("redoToolStripMenuItem.Image")));
-            this.redoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
-            this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
-            this.redoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.redoToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.redoToolStripMenuItem.Text = "&Redo";
+            this.Util_xmlToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("Util_xmlToolStripMenuItem.Image")));
+            this.Util_xmlToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
+            this.Util_xmlToolStripMenuItem.Name = "Util_xmlToolStripMenuItem";
+            this.Util_xmlToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
+            this.Util_xmlToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.Util_xmlToolStripMenuItem.Text = "Util_Xml";
+            this.Util_xmlToolStripMenuItem.Click += new System.EventHandler(this.Util_xmlToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
@@ -575,7 +576,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editMenu;
         private System.Windows.Forms.ToolStripMenuItem Util_EncodingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem redoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Util_xmlToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;

@@ -14,3 +14,6 @@ C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.exe
 C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.pdb
 C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\wintest.exe.config
 C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\skin.css
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.Util_XmlForm.resources
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\RdlCompile.cache
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\RdlCompile.compiled

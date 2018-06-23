@@ -57,7 +57,26 @@ namespace wintest
 
         }
 
+        private ListView GetSelLv(Control ctrl)
+        {
 
+            if (ctrl.HasChildren)
+            {
+                foreach (Control childctrl in ctrl.Controls)
+                {
+                    return this.GetSelLv(childctrl);
+                }
+                return null;
+            }
+            else
+            {
+                if ((ctrl is ListView) )
+                    return ctrl as ListView;
+                else
+                    return null;
+
+            }
+        }
 
 
         private void button1_Click(object sender, EventArgs e)
