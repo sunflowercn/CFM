@@ -82,6 +82,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.myWaittingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -289,17 +290,19 @@
             this.toolBarToolStripMenuItem,
             this.statusBarToolStripMenuItem});
             this.viewMenu.Name = "viewMenu";
-            this.viewMenu.Size = new System.Drawing.Size(47, 21);
-            this.viewMenu.Text = "&View";
+            this.viewMenu.Size = new System.Drawing.Size(72, 21);
+            this.viewMenu.Text = "WinForm";
             // 
             // toolBarToolStripMenuItem
             // 
             this.toolBarToolStripMenuItem.Checked = true;
             this.toolBarToolStripMenuItem.CheckOnClick = true;
             this.toolBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolBarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.myWaittingToolStripMenuItem});
             this.toolBarToolStripMenuItem.Name = "toolBarToolStripMenuItem";
-            this.toolBarToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.toolBarToolStripMenuItem.Text = "&Toolbar";
+            this.toolBarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.toolBarToolStripMenuItem.Text = "HelpUI";
             this.toolBarToolStripMenuItem.Click += new System.EventHandler(this.ToolBarToolStripMenuItem_Click);
             // 
             // statusBarToolStripMenuItem
@@ -308,7 +311,7 @@
             this.statusBarToolStripMenuItem.CheckOnClick = true;
             this.statusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.statusBarToolStripMenuItem.Name = "statusBarToolStripMenuItem";
-            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.statusBarToolStripMenuItem.Text = "&Status Bar";
             this.statusBarToolStripMenuItem.Click += new System.EventHandler(this.StatusBarToolStripMenuItem_Click);
             // 
@@ -323,7 +326,7 @@
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.optionsToolStripMenuItem.Text = "&Options";
             // 
             // windowsMenu
@@ -526,6 +529,13 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(43, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
+            // myWaittingToolStripMenuItem
+            // 
+            this.myWaittingToolStripMenuItem.Name = "myWaittingToolStripMenuItem";
+            this.myWaittingToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.myWaittingToolStripMenuItem.Text = "MyWaiting";
+            this.myWaittingToolStripMenuItem.Click += new System.EventHandler(this.myWaittingToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -603,6 +613,7 @@
         private System.Windows.Forms.ToolStripButton printPreviewToolStripButton;
         private System.Windows.Forms.ToolStripButton helpToolStripButton;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.ToolStripMenuItem myWaittingToolStripMenuItem;
     }
 }
 
