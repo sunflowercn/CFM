@@ -53,6 +53,13 @@
     <Compile Include="FormManager\ChildForm.Designer.cs">
       <DependentUpon>ChildForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelpUI\MyWaiting.cs" />
+    <Compile Include="HelpUI\WaitingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpUI\WaitingForm.designer.cs">
+      <DependentUpon>WaitingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inherit\MessageBoxEx.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +77,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FormManager\ChildForm.resx">
       <DependentUpon>ChildForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpUI\WaitingForm.resx">
+      <DependentUpon>WaitingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inherit\MessageBoxEx.resx">
       <DependentUpon>MessageBoxEx.cs</DependentUpon>

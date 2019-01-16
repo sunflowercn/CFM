@@ -119,5 +119,12 @@ namespace wintest
             form.MdiParent = this;
             form.Show();
         }
+
+        private void myWaittingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TestMyWaitingForm form = new TestMyWaitingForm();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
