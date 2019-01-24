@@ -49,9 +49,9 @@ namespace win.Util
                     item.SetValue(aimobj, newval, null);
 
                 }
-                catch (Exception ex)
+                catch
                 {
-                    ex.Publish();
+                    
                 }
             }
         }
