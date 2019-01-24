@@ -35,3 +35,5 @@ C:\Users\dlz\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.csproj.GenerateResou
 C:\Users\dlz\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.exe
 C:\Users\dlz\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.pdb
 C:\Users\dlz\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.TestMyWaitingForm.resources
+C:\Users\dlz\Source\Repos\CFM\CFM\wintest\obj\Debug\RdlCompile.cache
+C:\Users\dlz\Source\Repos\CFM\CFM\wintest\obj\Debug\RdlCompile.compiled
