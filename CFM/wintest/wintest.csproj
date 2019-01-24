@@ -81,6 +81,12 @@
     <Compile Include="Util_EncodingForm.Designer.cs">
       <DependentUpon>Util_EncodingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestLoggerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestLoggerForm.Designer.cs">
+      <DependentUpon>TestLoggerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util_XmlForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Util_EncodingForm.resx">
       <DependentUpon>Util_EncodingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestLoggerForm.resx">
+      <DependentUpon>TestLoggerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Util_XmlForm.resx">
       <DependentUpon>Util_XmlForm.cs</DependentUpon>

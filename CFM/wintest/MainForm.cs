@@ -126,5 +126,12 @@ namespace wintest
             form.MdiParent = this;
             form.Show();
         }
+
+        private void LoggerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoggerForm form = new LoggerForm();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

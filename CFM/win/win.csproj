@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Logger\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -42,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logger\Logger.cs" />
     <Compile Include="Services\CardService\CardService.cs" />
     <Compile Include="Services\CardService\drivers\URF_R330_CardDevice.cs" />
     <Compile Include="Services\CardService\ICardDevice.cs" />
@@ -66,6 +71,14 @@
   <ItemGroup>
     <Folder Include="Services\AutoUpdate\" />
     <Folder Include="Tools\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logger\log4net.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
