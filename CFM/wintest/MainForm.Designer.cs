@@ -83,6 +83,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.htmlParserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -319,9 +320,11 @@
             this.statusBarToolStripMenuItem.Checked = true;
             this.statusBarToolStripMenuItem.CheckOnClick = true;
             this.statusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.statusBarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.htmlParserToolStripMenuItem});
             this.statusBarToolStripMenuItem.Name = "statusBarToolStripMenuItem";
             this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.statusBarToolStripMenuItem.Text = "&Status Bar";
+            this.statusBarToolStripMenuItem.Text = "Parsers";
             this.statusBarToolStripMenuItem.Click += new System.EventHandler(this.StatusBarToolStripMenuItem_Click);
             // 
             // Win
@@ -335,7 +338,7 @@
             // LoggerToolStripMenuItem
             // 
             this.LoggerToolStripMenuItem.Name = "LoggerToolStripMenuItem";
-            this.LoggerToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.LoggerToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
             this.LoggerToolStripMenuItem.Text = "Logger";
             this.LoggerToolStripMenuItem.Click += new System.EventHandler(this.LoggerToolStripMenuItem_Click);
             // 
@@ -542,6 +545,13 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(54, 20);
             this.toolStripStatusLabel.Text = "Status";
             // 
+            // htmlParserToolStripMenuItem
+            // 
+            this.htmlParserToolStripMenuItem.Name = "htmlParserToolStripMenuItem";
+            this.htmlParserToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.htmlParserToolStripMenuItem.Text = "HtmlParser";
+            this.htmlParserToolStripMenuItem.Click += new System.EventHandler(this.htmlParserToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -552,7 +562,7 @@
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.menuStrip.ResumeLayout(false);
@@ -621,6 +631,7 @@
         private System.Windows.Forms.ToolStripButton helpToolStripButton;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolStripMenuItem myWaittingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem htmlParserToolStripMenuItem;
     }
 }
 

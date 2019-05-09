@@ -40,6 +40,10 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Winista.HtmlParser, Version=1.8.0.0, Culture=neutral">
+      <HintPath>..\packages\Winista.HtmlParser.1.8.0\lib\Winista.HtmlParser.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CtrlExt\Ext_ComBox.cs" />
@@ -92,6 +96,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\error.gif" />
   </ItemGroup>
   <ItemGroup>

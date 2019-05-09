@@ -133,5 +133,12 @@ namespace wintest
             form.MdiParent = this;
             form.Show();
         }
+
+        private void htmlParserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HtmlParserForm form = new HtmlParserForm();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
