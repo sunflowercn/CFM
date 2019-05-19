@@ -56,6 +56,7 @@
             this.toolBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myWaittingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.htmlParserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Win = new System.Windows.Forms.ToolStripMenuItem();
             this.LoggerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,7 +84,9 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.htmlParserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.encryptorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.desEncryptorTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -304,14 +307,14 @@
             this.toolBarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.myWaittingToolStripMenuItem});
             this.toolBarToolStripMenuItem.Name = "toolBarToolStripMenuItem";
-            this.toolBarToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.toolBarToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
             this.toolBarToolStripMenuItem.Text = "HelpUI";
             this.toolBarToolStripMenuItem.Click += new System.EventHandler(this.ToolBarToolStripMenuItem_Click);
             // 
             // myWaittingToolStripMenuItem
             // 
             this.myWaittingToolStripMenuItem.Name = "myWaittingToolStripMenuItem";
-            this.myWaittingToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.myWaittingToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.myWaittingToolStripMenuItem.Text = "MyWaiting";
             this.myWaittingToolStripMenuItem.Click += new System.EventHandler(this.myWaittingToolStripMenuItem_Click);
             // 
@@ -323,14 +326,22 @@
             this.statusBarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.htmlParserToolStripMenuItem});
             this.statusBarToolStripMenuItem.Name = "statusBarToolStripMenuItem";
-            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
             this.statusBarToolStripMenuItem.Text = "Parsers";
             this.statusBarToolStripMenuItem.Click += new System.EventHandler(this.StatusBarToolStripMenuItem_Click);
+            // 
+            // htmlParserToolStripMenuItem
+            // 
+            this.htmlParserToolStripMenuItem.Name = "htmlParserToolStripMenuItem";
+            this.htmlParserToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.htmlParserToolStripMenuItem.Text = "HtmlParser";
+            this.htmlParserToolStripMenuItem.Click += new System.EventHandler(this.htmlParserToolStripMenuItem_Click);
             // 
             // Win
             // 
             this.Win.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.LoggerToolStripMenuItem});
+            this.LoggerToolStripMenuItem,
+            this.toolsToolStripMenuItem});
             this.Win.Name = "Win";
             this.Win.Size = new System.Drawing.Size(49, 24);
             this.Win.Text = "Win";
@@ -338,7 +349,7 @@
             // LoggerToolStripMenuItem
             // 
             this.LoggerToolStripMenuItem.Name = "LoggerToolStripMenuItem";
-            this.LoggerToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            this.LoggerToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.LoggerToolStripMenuItem.Text = "Logger";
             this.LoggerToolStripMenuItem.Click += new System.EventHandler(this.LoggerToolStripMenuItem_Click);
             // 
@@ -545,12 +556,28 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(54, 20);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // htmlParserToolStripMenuItem
+            // toolsToolStripMenuItem
             // 
-            this.htmlParserToolStripMenuItem.Name = "htmlParserToolStripMenuItem";
-            this.htmlParserToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.htmlParserToolStripMenuItem.Text = "HtmlParser";
-            this.htmlParserToolStripMenuItem.Click += new System.EventHandler(this.htmlParserToolStripMenuItem_Click);
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.encryptorToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // encryptorToolStripMenuItem
+            // 
+            this.encryptorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.desEncryptorTestToolStripMenuItem});
+            this.encryptorToolStripMenuItem.Name = "encryptorToolStripMenuItem";
+            this.encryptorToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.encryptorToolStripMenuItem.Text = "Encryptor";
+            // 
+            // desEncryptorTestToolStripMenuItem
+            // 
+            this.desEncryptorTestToolStripMenuItem.Name = "desEncryptorTestToolStripMenuItem";
+            this.desEncryptorTestToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.desEncryptorTestToolStripMenuItem.Text = "DesEncryptorTest";
+            this.desEncryptorTestToolStripMenuItem.Click += new System.EventHandler(this.desEncryptorTestToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -632,6 +659,9 @@
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolStripMenuItem myWaittingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem htmlParserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem encryptorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem desEncryptorTestToolStripMenuItem;
     }
 }
 

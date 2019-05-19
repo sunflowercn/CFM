@@ -24,7 +24,7 @@ namespace wintest
             string r1 = win.Util.Util_Http.HttpGet(url, string.Empty); //上海期货交易所，每日交易数据
 
             HtmlParser parser = new HtmlParser();
-            parser.
+          
         }
     }
 }

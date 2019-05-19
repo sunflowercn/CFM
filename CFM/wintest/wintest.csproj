@@ -57,6 +57,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EncryptorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncryptorForm.Designer.cs">
+      <DependentUpon>EncryptorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <Compile Include="Util_XmlForm.Designer.cs">
       <DependentUpon>Util_XmlForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EncryptorForm.resx">
+      <DependentUpon>EncryptorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
