@@ -77,5 +77,35 @@ namespace win.Util
             return chs.GetString(bytes);
         }
 
+
+     
+	    public static byte[] fromHex(String hex)
+        {
+            byte[] binary = new byte[hex.Length / 2];
+            for (int i = 0; i < binary.Length; i++)
+            {
+                binary[i] = Convert.ToByte(hex.Substring(2 * i,2),16);
+            }
+            return binary;
+        }
+
+  
+        public static string toHex(byte[] array)
+        {
+            char[] chars = "0123456789ABCDEF".ToCharArray();
+            StringBuilder sb = new StringBuilder("");
+           
+            int bit;
+            for (int i = 0; i < array.Length; i++)
+            {
+                bit = (array[i] & 0x0f0) >> 4;
+                sb.Append(chars[bit]);
+                bit = array[i] & 0x0f;
+                sb.Append(chars[bit]);
+            }
+            return sb.ToString();
+
+        }
+
     }
 }

@@ -5,12 +5,12 @@ using System.Text;
 
 namespace win.Tools.Encryptor
 {
-    public class DesEncryptor
+    public class DESEncryptor:IEncryptor,IDecryptor
     {
         //对称加密密钥
         private string secKey;
 
-        public DesEncryptor(string secKey)
+        public DESEncryptor(string secKey)
         {
             this.secKey = secKey;
         }
