@@ -24,7 +24,7 @@ namespace win.Tools.Encryptor
         public int iterations;
         public int hashbytesize;
 
-        public HMACSHA1Encryptor(string salt, int iterations,int hashbytesize=15)
+        public HMACSHA1Encryptor(string salt, int iterations=800,int hashbytesize=15)
         {
             this.salt = salt;
             this.iterations = iterations;
@@ -33,22 +33,11 @@ namespace win.Tools.Encryptor
 
 
         public string Encrypt(string plaintext)
-        {
-            //byte[] unsaltedplaintext = Encoding.Default.GetBytes(plaintext);
-            //byte[] arrsalt = Encoding.Default.GetBytes(salt);
-
-            //byte[] unsaltedplaintext = Util_Encoding.fromHex(plaintext);
+        {         
             byte[] arrsalt = Util_Encoding.fromHex(salt);
-
             Rfc2898DeriveBytes dd = new Rfc2898DeriveBytes(plaintext, arrsalt, iterations);
             var ss = dd.GetBytes(hashbytesize);
-
-            return Util_Encoding.toHex(ss);
-
-            //[24, 110, 86, 120, -56, -76, 9, 33, -27, 110, -124, 120, 7, -73, -34]
-
-
-           
+            return Util_Encoding.toHex(ss);           
         }
    
     }
