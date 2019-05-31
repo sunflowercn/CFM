@@ -21,7 +21,7 @@ namespace wintest
         private void EncryptorForm_Load(object sender, EventArgs e)
         {
             if (this.comboBox1.SelectedIndex == 0)
-                this.txtPlain.Text = "13501066823";
+                this.txtPlain.Text = "13501066823";           
         }
 
         private void btnEncrypt_Click(object sender, EventArgs e)
@@ -47,14 +47,20 @@ namespace wintest
 
         private void btnDecrypt_Click(object sender, EventArgs e)
         {
-            if (this.comboBox1.SelectedIndex == 1)
+            if (this.comboBox1.SelectedIndex == 0)
             {
                 string seckey = "tjlx4Xd_dXa6xsC3pq-uX92h";
                 DESEncryptor cryptor = new DESEncryptor(seckey);
+                this.txtDecrypt.Text = cryptor.Decrypt(this.txtEncrypt.Text);
+                this.txtDecrypt.Text = cryptor.Decrypt(this.txtDecrypt.Text);
             }
-            else
+            else if(this.comboBox1.SelectedIndex==1)
             {
+                RSAEncryptor  cryptor = new RSAEncryptor(null,null);
 
+                string[] keys = cryptor.GenerateKeys();
+
+               this.txtDecrypt.Text =  cryptor.Decrypt(this.txtEncrypt.Text);
             }
         }
 
@@ -62,6 +68,8 @@ namespace wintest
         {
             if (this.comboBox1.SelectedIndex == 0)
                 this.txtPlain.Text = "13501066823";
+            if (this.comboBox1.SelectedIndex == 1)
+                this.txtEncrypt.Text = "c31R5CMFxxXq6mum0/qBHi4E8TmRR6hW/qxOXFZ98sc4XOGfsTs1ju0xvI1oUamXNBfY8MU6LMsMuOVLkiFKwjjW0AkExmc/kuxRzElt2QXCPZQlAbA3VCLMT0zpd9RsbwoLBDVlDda10OVa0nOFHifrs97EyfAm1sslLLiyOTk=";
         }
 
         private static byte[] fromHex(String hex)

@@ -28,18 +28,16 @@ namespace win.Tools.Encryptor
         {
             this.salt = salt;
             this.iterations = iterations;
-            this.hashbytesize = hashbytesize;
+            this.hashbytesize = hashbytesize;           
         }
 
-
         public string Encrypt(string plaintext)
-        {         
+        {           
             byte[] arrsalt = Util_Encoding.fromHex(salt);
             Rfc2898DeriveBytes dd = new Rfc2898DeriveBytes(plaintext, arrsalt, iterations);
             var ss = dd.GetBytes(hashbytesize);
             return Util_Encoding.toHex(ss);           
-        }
-   
+        }   
     }
 
 }
