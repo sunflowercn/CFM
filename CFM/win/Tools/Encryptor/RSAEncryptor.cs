@@ -17,8 +17,8 @@ namespace win.Tools.Encryptor
     public class RSAEncryptor:IEncryptor,IDecryptor
     {
     
-        private static  int MAX_ENCRYPT_BLOCK = 117; //RSA最大加密明文大小
-        private static  int MAX_DECRYPT_BLOCK = 128; //RSA最大解密密文大小
+        //private static  int MAX_ENCRYPT_BLOCK = 117; //RSA最大加密明文大小  暂时用不到分段加密解密
+        //private static  int MAX_DECRYPT_BLOCK = 128; //RSA最大解密密文大小
         
         private string publickey;
         private string privateKey;
