@@ -44,3 +44,4 @@ C:\Users\dlz\Source\Repos\CFM\CFM\wintest\bin\Debug\Winista.HtmlParser.dll
 C:\Users\dlz\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.EncryptorForm.resources
 C:\Users\dlz\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.HtmlParserForm.resources
 C:\Users\dlz\Source\Repos\CFM\CFM\wintest\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\dlz\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.RSAKeyTransForm.resources

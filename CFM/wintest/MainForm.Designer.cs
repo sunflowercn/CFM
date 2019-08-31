@@ -59,6 +59,9 @@
             this.htmlParserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Win = new System.Windows.Forms.ToolStripMenuItem();
             this.LoggerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.encryptorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.desEncryptorTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.newWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,9 +87,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.encryptorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.desEncryptorTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rSAKeyTransToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -353,6 +354,30 @@
             this.LoggerToolStripMenuItem.Text = "Logger";
             this.LoggerToolStripMenuItem.Click += new System.EventHandler(this.LoggerToolStripMenuItem_Click);
             // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.encryptorToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // encryptorToolStripMenuItem
+            // 
+            this.encryptorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.desEncryptorTestToolStripMenuItem,
+            this.rSAKeyTransToolStripMenuItem});
+            this.encryptorToolStripMenuItem.Name = "encryptorToolStripMenuItem";
+            this.encryptorToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.encryptorToolStripMenuItem.Text = "Encryptor";
+            // 
+            // desEncryptorTestToolStripMenuItem
+            // 
+            this.desEncryptorTestToolStripMenuItem.Name = "desEncryptorTestToolStripMenuItem";
+            this.desEncryptorTestToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.desEncryptorTestToolStripMenuItem.Text = "DesEncryptorTest";
+            this.desEncryptorTestToolStripMenuItem.Click += new System.EventHandler(this.desEncryptorTestToolStripMenuItem_Click);
+            // 
             // windowsMenu
             // 
             this.windowsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -556,28 +581,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(54, 20);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // toolsToolStripMenuItem
+            // rSAKeyTransToolStripMenuItem
             // 
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.encryptorToolStripMenuItem});
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.toolsToolStripMenuItem.Text = "Tools";
-            // 
-            // encryptorToolStripMenuItem
-            // 
-            this.encryptorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.desEncryptorTestToolStripMenuItem});
-            this.encryptorToolStripMenuItem.Name = "encryptorToolStripMenuItem";
-            this.encryptorToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.encryptorToolStripMenuItem.Text = "Encryptor";
-            // 
-            // desEncryptorTestToolStripMenuItem
-            // 
-            this.desEncryptorTestToolStripMenuItem.Name = "desEncryptorTestToolStripMenuItem";
-            this.desEncryptorTestToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
-            this.desEncryptorTestToolStripMenuItem.Text = "DesEncryptorTest";
-            this.desEncryptorTestToolStripMenuItem.Click += new System.EventHandler(this.desEncryptorTestToolStripMenuItem_Click);
+            this.rSAKeyTransToolStripMenuItem.Name = "rSAKeyTransToolStripMenuItem";
+            this.rSAKeyTransToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.rSAKeyTransToolStripMenuItem.Text = "RSAKeyTrans";
+            this.rSAKeyTransToolStripMenuItem.Click += new System.EventHandler(this.rSAKeyTransToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -662,6 +671,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem encryptorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem desEncryptorTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rSAKeyTransToolStripMenuItem;
     }
 }
 

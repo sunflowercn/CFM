@@ -147,5 +147,12 @@ namespace wintest
             form.MdiParent = this;
             form.Show();
         }
+
+        private void rSAKeyTransToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RSAKeyTransForm form = new RSAKeyTransForm();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
