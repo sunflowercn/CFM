@@ -154,5 +154,12 @@ namespace wintest
             form.MdiParent = this;
             form.Show();
         }
+
+        private void utilCompressToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CompressForm form = new CompressForm();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

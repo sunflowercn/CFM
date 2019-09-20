@@ -45,3 +45,4 @@ C:\Users\dlz\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.EncryptorForm.resour
 C:\Users\dlz\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.HtmlParserForm.resources
 C:\Users\dlz\Source\Repos\CFM\CFM\wintest\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\dlz\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.RSAKeyTransForm.resources
+C:\Users\dlz\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.CompressForm.resources

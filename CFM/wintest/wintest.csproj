@@ -52,6 +52,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompressForm.Designer.cs">
+      <DependentUpon>CompressForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -115,6 +121,9 @@
     <Compile Include="Util_XmlForm.Designer.cs">
       <DependentUpon>Util_XmlForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CompressForm.resx">
+      <DependentUpon>CompressForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EncryptorForm.resx">
       <DependentUpon>EncryptorForm.cs</DependentUpon>
     </EmbeddedResource>
