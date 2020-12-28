@@ -51,7 +51,7 @@ namespace wintest
 
             this.webBrowser1.DocumentText = "";
 
-            this.webBrowser1.Document.Write(html);
+            this.webBrowser1.Document.Write(html); 
             this.webBrowser1.Refresh();
 
 
