@@ -1,4 +1,3 @@
-C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.Form1.resources
 C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.MainForm.resources
 C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.Properties.Resources.resources
@@ -15,8 +14,6 @@ C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.pdb
 C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\wintest.exe.config
 C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\skin.css
 C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.Util_XmlForm.resources
-C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\RdlCompile.cache
-C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\RdlCompile.compiled
 C:\Users\dlz\Source\Repos\CFM\CFM\wintest\bin\Debug\log4net.config
 C:\Users\dlz\Source\Repos\CFM\CFM\wintest\bin\Debug\skin.css
 C:\Users\dlz\Source\Repos\CFM\CFM\wintest\bin\Debug\wintest.exe.config
@@ -46,3 +43,16 @@ C:\Users\dlz\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.HtmlParserForm.resou
 C:\Users\dlz\Source\Repos\CFM\CFM\wintest\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\dlz\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.RSAKeyTransForm.resources
 C:\Users\dlz\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.CompressForm.resources
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\log4net.config
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\Winista.HtmlParser.dll
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\log4net.dll
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.csprojAssemblyReference.cache
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.CompressForm.resources
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.EncryptorForm.resources
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.HtmlParserForm.resources
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.RSAKeyTransForm.resources
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.TestMyWaitingForm.resources
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.LoggerForm.resources
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Source\Repos\CFM\CFM\wintest\obj\Debug\wintest.csproj.CopyComplete

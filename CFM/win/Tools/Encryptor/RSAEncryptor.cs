@@ -25,12 +25,18 @@ namespace win.Tools.Encryptor
 
         public RSAEncryptor()
         {
+            //java中密钥是下面这个，.net中私钥解密还要把这个进行转换
             this.privateKey = "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKJGE9CQ36mYi2dCsQKiZ2x///9e6UcTnmaFiUcDz/E15gb3Fd5E7RH/Uci2XtsBVeDWXlYZAtHBqQh9BJt4/N25clAGTl62+fnXWIKZ26YrDEYYtDejO/27K715u+FB8CL7ews6Qb2X7Orz+Yj98rTd5UT3PiqXsvtD2yZ5a3hbAgMBAAECgYAeLP/kSfx9kjNiKWG3RrIK2Canu2OP5xMOp4hmn0vc5BP5eZskcRbQwPTZaShse2wX2mVCh3YhwWyIeo8PxkjnOpWjB03NU0ciB5toS45DhpvUIuFPvIN0ElXsY8l2gP2TCa+P8o+TZw80/ToXjxB8SXQSjGhWZSoAeAqWFLeMgQJBAM135ef0LGxGievq9t9lyzry3D0ry+mfoxuFKuFH6gCjPUVcIt9NIIIgETX/R8oI/t0qzyzjmAx9t7Trgp0jYcECQQDKLq+AqfbHuA1SryZKjLqiI3sRTH+vNXRRgizOe8YiMFl9r6Antf7azXVt7AnDwtJMmC2lUpgkT/hggv6ZmGkbAkEAqy0TXa4gAEi4CNLkv3Ln4IGKGHBPXqA/W+MSuUKXYdadahZ7evufdKlQjWLTJS9fXVSX6zblaqqmDNUUKOPcQQJAfuYahZkoKWaeBh2k3PnDUm0Om2b2ZVQZs+cOlHMfgunx4W9QCFy0n0SBxgJ2hoZLVIPXcoKKt4/yBzFw95qvrQJAPRWtRT+oEj8HE/IjELoLkJrR82WR2yXe0YSZ+RKL8EpE0i0beYXtrvQZSr0BUfHx0vFU7DDLhCsZTxDrN/naMQ==";
+            this.publickey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCiRhPQkN+pmItnQrEComdsf///XulHE55mhYlHA8/xNeYG9xXeRO0R/1HItl7bAVXg1l5WGQLRwakIfQSbePzduXJQBk5etvn511iCmdumKwxGGLQ3ozv9uyu9ebvhQfAi+3sLOkG9l+zq8/mI/fK03eVE9z4ql7L7Q9smeWt4WwIDAQAB";
         }
         public RSAEncryptor(string privatekey,string publickey)
         {
             this.privateKey = privatekey;
             this.publickey = publickey;
+
+            //java中密钥是下面这个，.net中私钥解密还要把这个进行转换
+            this.privateKey = "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKJGE9CQ36mYi2dCsQKiZ2x///9e6UcTnmaFiUcDz/E15gb3Fd5E7RH/Uci2XtsBVeDWXlYZAtHBqQh9BJt4/N25clAGTl62+fnXWIKZ26YrDEYYtDejO/27K715u+FB8CL7ews6Qb2X7Orz+Yj98rTd5UT3PiqXsvtD2yZ5a3hbAgMBAAECgYAeLP/kSfx9kjNiKWG3RrIK2Canu2OP5xMOp4hmn0vc5BP5eZskcRbQwPTZaShse2wX2mVCh3YhwWyIeo8PxkjnOpWjB03NU0ciB5toS45DhpvUIuFPvIN0ElXsY8l2gP2TCa+P8o+TZw80/ToXjxB8SXQSjGhWZSoAeAqWFLeMgQJBAM135ef0LGxGievq9t9lyzry3D0ry+mfoxuFKuFH6gCjPUVcIt9NIIIgETX/R8oI/t0qzyzjmAx9t7Trgp0jYcECQQDKLq+AqfbHuA1SryZKjLqiI3sRTH+vNXRRgizOe8YiMFl9r6Antf7azXVt7AnDwtJMmC2lUpgkT/hggv6ZmGkbAkEAqy0TXa4gAEi4CNLkv3Ln4IGKGHBPXqA/W+MSuUKXYdadahZ7evufdKlQjWLTJS9fXVSX6zblaqqmDNUUKOPcQQJAfuYahZkoKWaeBh2k3PnDUm0Om2b2ZVQZs+cOlHMfgunx4W9QCFy0n0SBxgJ2hoZLVIPXcoKKt4/yBzFw95qvrQJAPRWtRT+oEj8HE/IjELoLkJrR82WR2yXe0YSZ+RKL8EpE0i0beYXtrvQZSr0BUfHx0vFU7DDLhCsZTxDrN/naMQ==";
+            this.publickey  = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCiRhPQkN+pmItnQrEComdsf///XulHE55mhYlHA8/xNeYG9xXeRO0R/1HItl7bAVXg1l5WGQLRwakIfQSbePzduXJQBk5etvn511iCmdumKwxGGLQ3ozv9uyu9ebvhQfAi+3sLOkG9l+zq8/mI/fK03eVE9z4ql7L7Q9smeWt4WwIDAQAB";
         }
 
         public  string[] GenerateKeys()
@@ -42,23 +48,36 @@ namespace win.Tools.Encryptor
             return sKeys;
         }
 
-        public  string Encrypt(string strInput)
+        public  string Encrypt(string plaintext)
         {
-            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
-
-            string sss = rsa.SignatureAlgorithm;         
-            string plaintext = strInput;
-            rsa.FromXmlString(publickey);
-            byte[] cipherbytes;
-            //byte[] byteEn = rsa.Encrypt(Encoding.UTF8.GetBytes("a"), false);
-            cipherbytes = rsa.Encrypt(Encoding.UTF8.GetBytes(plaintext), false);
-
-            StringBuilder sbString = new StringBuilder();
-            for (int i = 0; i < cipherbytes.Length; i++)
+            publickey = RSAPublicKeyJava2DotNet(publickey);           
+            using (RSACryptoServiceProvider rsa = new RSACryptoServiceProvider())
             {
-                sbString.Append(cipherbytes[i] + ",");
+                rsa.FromXmlString(publickey);
+                byte[] plainData = Encoding.UTF8.GetBytes(plaintext);
+                int maxBlockSize = rsa.KeySize / 8 - 11;    //加密块最大长度限制
+                if (plaintext.Length <= maxBlockSize)
+                {
+                    return Convert.ToBase64String(rsa.Encrypt(plainData, false));
+                }
+                using (MemoryStream plainStream = new MemoryStream(plainData))
+                using (MemoryStream cryptoStream = new MemoryStream())
+                {
+                    Byte[] buffer = new Byte[maxBlockSize];
+                    int blockSize = plainStream.Read(buffer, 0, maxBlockSize);
+                    while (blockSize > 0)
+                    {
+                        Byte[] toEncrypt = new Byte[blockSize];
+                        Array.Copy(buffer, 0, toEncrypt, 0, blockSize);
+
+                        Byte[] cryptoGraph = rsa.Encrypt(toEncrypt, false);
+                        cryptoStream.Write(cryptoGraph, 0, cryptoGraph.Length);
+
+                        blockSize = plainStream.Read(buffer, 0, maxBlockSize);
+                    }
+                    return Convert.ToBase64String(cryptoStream.ToArray(), Base64FormattingOptions.None);
+                }
             }
-            return sbString.ToString();
         }
 
         /// <summary>

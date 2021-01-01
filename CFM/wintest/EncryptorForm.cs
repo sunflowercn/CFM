@@ -32,6 +32,11 @@ namespace wintest
                 DESEncryptor cryptor = new DESEncryptor(seckey);
                 this.txtEncrypt.Text = cryptor.Encrypt(this.txtPlain.Text);
             }
+            if (this.comboBox1.SelectedIndex == 1)
+            {
+                RSAEncryptor cryptor = new RSAEncryptor(null, null);
+                this.txtEncrypt.Text = cryptor.Encrypt(this.txtPlain.Text);
+            }
             else
             {
                 string pwd = "800:6cc3cfc47dbd03c1cbc60398b0988a:186e5678c8b40921e56e847807b7de";
@@ -51,16 +56,12 @@ namespace wintest
             {
                 string seckey = "tjlx4Xd_dXa6xsC3pq-uX92h";
                 DESEncryptor cryptor = new DESEncryptor(seckey);
-                this.txtDecrypt.Text = cryptor.Decrypt(this.txtEncrypt.Text);
-                this.txtDecrypt.Text = cryptor.Decrypt(this.txtDecrypt.Text);
+                this.txtDecrypt.Text = cryptor.Decrypt(this.txtEncrypt.Text);              
             }
             else if(this.comboBox1.SelectedIndex==1)
             {
-                RSAEncryptor  cryptor = new RSAEncryptor(null,null);
-
-                string[] keys = cryptor.GenerateKeys();
-
-               this.txtDecrypt.Text =  cryptor.Decrypt(this.txtEncrypt.Text);
+                RSAEncryptor  cryptor = new RSAEncryptor(null,null);                         
+                this.txtDecrypt.Text =  cryptor.Decrypt(this.txtEncrypt.Text);
             }
         }
 

@@ -141,7 +141,7 @@ namespace wintest
             form.Show();
         }
 
-        private void desEncryptorTestToolStripMenuItem_Click(object sender, EventArgs e)
+        private void EncryptorTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EncryptorForm form = new EncryptorForm();
             form.MdiParent = this;
