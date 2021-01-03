@@ -5,8 +5,9 @@ using System.Text;
 
 namespace win.Tools.Encryptor
 {
-    interface IEncryptor
+    public interface IEncryptor
     {
-        string Encrypt(string plaintext);        
+        string Encrypt(string plaintext);
+        string Decrypt(string secrettext);
     }
 }

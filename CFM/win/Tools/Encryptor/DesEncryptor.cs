@@ -5,7 +5,7 @@ using System.Text;
 
 namespace win.Tools.Encryptor
 {
-    public class DESEncryptor:IEncryptor,IDecryptor
+    public class DESEncryptor:IEncryptor
     {
         //对称加密密钥
         private string secKey;
@@ -13,6 +13,7 @@ namespace win.Tools.Encryptor
         public DESEncryptor(string secKey)
         {
             this.secKey = secKey;
+            this.secKey = "tjlx4Xd_dXa6xsC3pq-uX92h";
         }
 
         public  string Encrypt(string strInput)

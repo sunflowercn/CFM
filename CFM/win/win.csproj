@@ -64,10 +64,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tester\MemoryTester.cs" />
     <Compile Include="Tester\TimeTester.cs" />
+    <Compile Include="Tools\Encryptor\HMACSHA256Encryptor.cs" />
     <Compile Include="Tools\Encryptor\RSAEncryptor.cs" />
     <Compile Include="Tools\Encryptor\HMACSHA1Encryptor.cs" />
     <Compile Include="Tools\Encryptor\DESEncryptor.cs" />
-    <Compile Include="Tools\Encryptor\IDecryptor.cs" />
     <Compile Include="Tools\Encryptor\IEncryptor.cs" />
     <Compile Include="Tools\Encryptor\MD5WithRSA.cs" />
     <Compile Include="Util\Util_Compress.cs" />

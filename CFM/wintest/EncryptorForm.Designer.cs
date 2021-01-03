@@ -45,70 +45,79 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Des",
-            "RSA"});
-            this.comboBox1.Location = new System.Drawing.Point(123, 21);
+            "RSA",
+            "HMACSHA256"});
+            this.comboBox1.Location = new System.Drawing.Point(92, 17);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(190, 23);
+            this.comboBox1.Size = new System.Drawing.Size(144, 20);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // txtPlain
             // 
-            this.txtPlain.Location = new System.Drawing.Point(123, 71);
+            this.txtPlain.Location = new System.Drawing.Point(92, 57);
+            this.txtPlain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPlain.Multiline = true;
             this.txtPlain.Name = "txtPlain";
-            this.txtPlain.Size = new System.Drawing.Size(496, 88);
+            this.txtPlain.Size = new System.Drawing.Size(373, 71);
             this.txtPlain.TabIndex = 1;
             // 
             // txtEncrypt
             // 
-            this.txtEncrypt.Location = new System.Drawing.Point(123, 178);
+            this.txtEncrypt.Location = new System.Drawing.Point(92, 142);
+            this.txtEncrypt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEncrypt.Multiline = true;
             this.txtEncrypt.Name = "txtEncrypt";
-            this.txtEncrypt.Size = new System.Drawing.Size(496, 88);
+            this.txtEncrypt.Size = new System.Drawing.Size(373, 71);
             this.txtEncrypt.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 24);
+            this.label1.Location = new System.Drawing.Point(23, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 15);
+            this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 3;
             this.label1.Text = "加密方式：";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 72);
+            this.label2.Location = new System.Drawing.Point(23, 58);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 15);
+            this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 4;
             this.label2.Text = "明    文：";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 280);
+            this.label3.Location = new System.Drawing.Point(23, 224);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 15);
+            this.label3.Size = new System.Drawing.Size(65, 12);
             this.label3.TabIndex = 5;
             this.label3.Text = "解    密：";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 181);
+            this.label4.Location = new System.Drawing.Point(23, 145);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 15);
+            this.label4.Size = new System.Drawing.Size(65, 12);
             this.label4.TabIndex = 6;
             this.label4.Text = "加    密：";
             // 
             // btnEncrypt
             // 
-            this.btnEncrypt.Location = new System.Drawing.Point(238, 412);
+            this.btnEncrypt.Location = new System.Drawing.Point(178, 330);
+            this.btnEncrypt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEncrypt.Name = "btnEncrypt";
-            this.btnEncrypt.Size = new System.Drawing.Size(75, 23);
+            this.btnEncrypt.Size = new System.Drawing.Size(56, 18);
             this.btnEncrypt.TabIndex = 7;
             this.btnEncrypt.Text = "加密";
             this.btnEncrypt.UseVisualStyleBackColor = true;
@@ -116,9 +125,10 @@
             // 
             // btnDecrypt
             // 
-            this.btnDecrypt.Location = new System.Drawing.Point(367, 412);
+            this.btnDecrypt.Location = new System.Drawing.Point(275, 330);
+            this.btnDecrypt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDecrypt.Name = "btnDecrypt";
-            this.btnDecrypt.Size = new System.Drawing.Size(75, 23);
+            this.btnDecrypt.Size = new System.Drawing.Size(56, 18);
             this.btnDecrypt.TabIndex = 8;
             this.btnDecrypt.Text = "解密";
             this.btnDecrypt.UseVisualStyleBackColor = true;
@@ -126,17 +136,18 @@
             // 
             // txtDecrypt
             // 
-            this.txtDecrypt.Location = new System.Drawing.Point(123, 280);
+            this.txtDecrypt.Location = new System.Drawing.Point(92, 224);
+            this.txtDecrypt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDecrypt.Multiline = true;
             this.txtDecrypt.Name = "txtDecrypt";
-            this.txtDecrypt.Size = new System.Drawing.Size(496, 88);
+            this.txtDecrypt.Size = new System.Drawing.Size(373, 71);
             this.txtDecrypt.TabIndex = 9;
             // 
             // EncryptorForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 458);
+            this.ClientSize = new System.Drawing.Size(487, 366);
             this.Controls.Add(this.txtDecrypt);
             this.Controls.Add(this.btnDecrypt);
             this.Controls.Add(this.btnEncrypt);
@@ -147,6 +158,7 @@
             this.Controls.Add(this.txtEncrypt);
             this.Controls.Add(this.txtPlain);
             this.Controls.Add(this.comboBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EncryptorForm";
             this.Text = "EncryptorForm";
             this.Load += new System.EventHandler(this.EncryptorForm_Load);

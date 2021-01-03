@@ -14,21 +14,12 @@ using System.Xml;
 
 namespace win.Tools.Encryptor
 {
-    public class RSAEncryptor:IEncryptor,IDecryptor
-    {
-    
+    public class RSAEncryptor:IEncryptor
+    {    
         //private static  int MAX_ENCRYPT_BLOCK = 117; //RSA最大加密明文大小  暂时用不到分段加密解密
-        //private static  int MAX_DECRYPT_BLOCK = 128; //RSA最大解密密文大小
-        
+        //private static  int MAX_DECRYPT_BLOCK = 128; //RSA最大解密密文大小        
         private string publickey;
-        private string privateKey;
-
-        public RSAEncryptor()
-        {
-            //java中密钥是下面这个，.net中私钥解密还要把这个进行转换
-            this.privateKey = "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKJGE9CQ36mYi2dCsQKiZ2x///9e6UcTnmaFiUcDz/E15gb3Fd5E7RH/Uci2XtsBVeDWXlYZAtHBqQh9BJt4/N25clAGTl62+fnXWIKZ26YrDEYYtDejO/27K715u+FB8CL7ews6Qb2X7Orz+Yj98rTd5UT3PiqXsvtD2yZ5a3hbAgMBAAECgYAeLP/kSfx9kjNiKWG3RrIK2Canu2OP5xMOp4hmn0vc5BP5eZskcRbQwPTZaShse2wX2mVCh3YhwWyIeo8PxkjnOpWjB03NU0ciB5toS45DhpvUIuFPvIN0ElXsY8l2gP2TCa+P8o+TZw80/ToXjxB8SXQSjGhWZSoAeAqWFLeMgQJBAM135ef0LGxGievq9t9lyzry3D0ry+mfoxuFKuFH6gCjPUVcIt9NIIIgETX/R8oI/t0qzyzjmAx9t7Trgp0jYcECQQDKLq+AqfbHuA1SryZKjLqiI3sRTH+vNXRRgizOe8YiMFl9r6Antf7azXVt7AnDwtJMmC2lUpgkT/hggv6ZmGkbAkEAqy0TXa4gAEi4CNLkv3Ln4IGKGHBPXqA/W+MSuUKXYdadahZ7evufdKlQjWLTJS9fXVSX6zblaqqmDNUUKOPcQQJAfuYahZkoKWaeBh2k3PnDUm0Om2b2ZVQZs+cOlHMfgunx4W9QCFy0n0SBxgJ2hoZLVIPXcoKKt4/yBzFw95qvrQJAPRWtRT+oEj8HE/IjELoLkJrR82WR2yXe0YSZ+RKL8EpE0i0beYXtrvQZSr0BUfHx0vFU7DDLhCsZTxDrN/naMQ==";
-            this.publickey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCiRhPQkN+pmItnQrEComdsf///XulHE55mhYlHA8/xNeYG9xXeRO0R/1HItl7bAVXg1l5WGQLRwakIfQSbePzduXJQBk5etvn511iCmdumKwxGGLQ3ozv9uyu9ebvhQfAi+3sLOkG9l+zq8/mI/fK03eVE9z4ql7L7Q9smeWt4WwIDAQAB";
-        }
+        private string privateKey;    
         public RSAEncryptor(string privatekey,string publickey)
         {
             this.privateKey = privatekey;
@@ -78,21 +69,15 @@ namespace win.Tools.Encryptor
                     return Convert.ToBase64String(cryptoStream.ToArray(), Base64FormattingOptions.None);
                 }
             }
-        }
-
-        /// <summary>
-        /// 用私钥进行解密
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public  string Decrypt(string input)
+        }       
+        public  string Decrypt(string secrettext)
         {
             try
             {               
                 string xmlkey = RSAPrivateKeyJava2DotNet(privateKey);
                 RSACryptoServiceProvider rsa =  new RSACryptoServiceProvider();
                 rsa.FromXmlString(xmlkey);                
-                byte[] arr = Convert.FromBase64String(input);                  
+                byte[] arr = Convert.FromBase64String(secrettext);                  
                 byte[] plaintbytes = rsa.Decrypt(arr, false);
                 string str = Encoding.Default.GetString(plaintbytes);
                 return str;

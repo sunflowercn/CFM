@@ -31,6 +31,11 @@ namespace win.Tools.Encryptor
             this.hashbytesize = hashbytesize;           
         }
 
+        public string Decrypt(string secrettext)
+        {
+            throw new NotImplementedException();
+        }
+
         public string Encrypt(string plaintext)
         {           
             byte[] arrsalt = Util_Encoding.fromHex(salt);
